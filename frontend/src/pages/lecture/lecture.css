@@ -1,0 +1,496 @@
+/* ============== BASE STYLES ============== */
+.lecture-page {
+  display: flex;
+  justify-content: space-between;
+  min-height: 80vh;
+  padding: 2rem;
+  gap: 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.left {
+  width: 70%;
+  padding: 2rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.right {
+  width: 30%;
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+/* ============== ANIMATIONS ============== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* ============== VIDEO PLAYER ============== */
+video {
+  width: 100%;
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease-out;
+}
+
+video:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.left h1 {
+  font-size: 2rem;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+  animation: slideUp 0.4s ease-out;
+}
+
+.left h1::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #8a4baf, #6b46c1);
+  border-radius: 3px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.left:hover h1::after {
+  transform: scaleX(1);
+}
+
+.left h3 {
+  font-size: 1.2rem;
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  animation: slideUp 0.4s ease-out 0.1s both;
+}
+
+/* ============== QUIZ SECTION ============== */
+.quiz-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.4s ease-out;
+}
+
+.quiz-section h2 {
+  font-size: 1.75rem;
+  color: #6b46c1;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.quiz-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #8a4baf, #6b46c1);
+  border-radius: 3px;
+}
+
+.quiz-question {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #8a4baf;
+  transition: all 0.3s ease;
+  animation: slideUp 0.4s ease-out;
+}
+
+.quiz-question:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.quiz-question h3 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.quiz-question label {
+  display: block;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+  background: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.quiz-question label:hover {
+  background: #f0f2ff;
+  border-color: #8a4baf;
+}
+
+.quiz-section button {
+  background: linear-gradient(135deg, #8a4baf 0%, #6b46c1 100%);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.quiz-section button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(138, 75, 175, 0.3);
+}
+
+/* ============== LECTURE LIST ============== */
+.lecture-list {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #edf2f7;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  margin: 1.5rem 0;
+  scroll-behavior: smooth;
+}
+
+.lecture-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.lecture-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.lecture-list::-webkit-scrollbar-thumb {
+  background: linear-gradient(#8a4baf, #6b46c1);
+  border-radius: 10px;
+}
+
+.lecture-list::-webkit-scrollbar-thumb:hover {
+  background: #6b46c1;
+}
+
+/* ============== LECTURE ITEMS ============== */
+.lecture-number {
+  background-color: #f8f9fa;
+  padding: 1rem 1.5rem;
+  border: 1px solid #e2e8f0;
+  margin: 0.75rem 0;
+  border-radius: 0.75rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  font-weight: 500;
+  color: #4a5568;
+  display: flex;
+  align-items: center;
+  animation: slideUp 0.4s ease-out;
+}
+
+.lecture-number::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: #8a4baf;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease;
+}
+
+.lecture-number:hover {
+  background-color: #f0f2ff;
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(138, 75, 175, 0.1);
+  color: #2d3748;
+}
+
+.lecture-number:hover::before {
+  transform: scaleY(1);
+}
+
+.active {
+  background-color: #f0f2ff;
+  border-color: #8a4baf;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.active::before {
+  transform: scaleY(1);
+}
+
+.completed-tick {
+  margin-left: auto;
+  color: #38a169;
+  font-size: 1.25rem;
+  animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* ============== BUTTONS ============== */
+.common-btn {
+  background: linear-gradient(135deg, #8a4baf 0%, #6b46c1 100%);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  margin: 1rem 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(138, 75, 175, 0.3);
+}
+
+.common-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(138, 75, 175, 0.4);
+}
+
+.delete-btn {
+  background: linear-gradient(135deg, #e53e3e 0%, #c53030 100%);
+  box-shadow: 0 4px 15px rgba(229, 62, 62, 0.3);
+}
+
+.delete-btn:hover {
+  box-shadow: 0 8px 25px rgba(229, 62, 62, 0.4);
+}
+
+.test-btn {
+  background: linear-gradient(135deg, #38a169 0%, #2f855a 100%);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  margin-top: 2rem;
+  box-shadow: 0 4px 15px rgba(56, 161, 105, 0.3);
+}
+
+.test-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(56, 161, 105, 0.4);
+}
+
+/* ============== LECTURE FORM ============== */
+.lecture-form {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  margin: 1.5rem 0;
+  animation: slideUp 0.4s ease-out;
+}
+
+.lecture-form h2 {
+  font-size: 1.5rem;
+  color: #6b46c1;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.lecture-form h2::after {
+  content: '';
+  position: absolute;
+  bottom: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #8a4baf, #6b46c1);
+  border-radius: 3px;
+}
+
+.lecture-form label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #4a5568;
+  text-align: left;
+}
+
+.lecture-form input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.lecture-form input:focus {
+  border-color: #8a4baf;
+  box-shadow: 0 0 0 3px rgba(138, 75, 175, 0.2);
+}
+
+.lecture-form input[type="file"] {
+  padding: 0.5rem;
+  border: 2px dashed #cbd5e0;
+  background-color: #f8fafc;
+  text-align: center;
+}
+
+.lecture-form input[type="file"]:hover {
+  border-color: #8a4baf;
+  background-color: #f0f2ff;
+}
+
+/* ============== PROGRESS BAR ============== */
+.progress {
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  animation: slideUp 0.4s ease-out;
+}
+
+.progress-text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.progress-completed {
+  color: #6b46c1;
+  font-weight: 600;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 10px;
+  background: #edf2f7;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #805ad5, #9f7aea);
+  transition: width 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.progress-percentage {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #6b46c1;
+  background: #f3f0ff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  animation: fadeIn 0.6s ease-out 0.3s both;
+}
+
+/* ============== RESPONSIVE DESIGN ============== */
+@media (max-width: 768px) {
+  .lecture-page {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .left, .right {
+    width: 100%;
+    padding: 1.5rem;
+  }
+  
+  .right {
+    margin-top: 1.5rem;
+  }
+  
+  .progress {
+    padding: 1rem;
+  }
+}

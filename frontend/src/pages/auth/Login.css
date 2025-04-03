@@ -1,0 +1,190 @@
+/* Login.css - Matched to Account component size */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: #f8f9fa;
+  }
+  
+  .login-card {
+    width: 100%;
+    max-width: 900px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+    border: 1px solid #eaeaea;
+  }
+  
+  .login-content-wrapper {
+    display: flex;
+    min-height: 500px; /* Matched to account-card height */
+  }
+  
+  .login-form {
+    flex: 1;
+    padding: 2.5rem; /* Matched to account-details padding */
+    min-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .login-image {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    background-color: #f7fafc;
+  }
+  
+  .login-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+  
+  .login-header {
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #f0f0f0; /* Added to match account style */
+  }
+  
+  .login-title {
+    margin: 0;
+    font-size: 1.5rem; /* Matched to account-title */
+    font-weight: 600;
+    color: #2d3748;
+  }
+  
+  .login-subtitle {
+    margin: 0.25rem 0 0; /* Matched to account-subtitle */
+    font-size: 0.9rem;
+    color: #718096;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem; /* Matched to account labels */
+    color: #4a5568;
+    font-weight: 500;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    font-size: 0.95rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px; /* Slightly smaller radius to match */
+    transition: all 0.2s ease;
+    background-color: #f8fafc;
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-color: #4f46e5;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.1);
+  }
+  
+  .login-btn {
+    width: 100%;
+    padding: 0.85rem; /* Matched to account button padding */
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem; /* Matched to account font size */
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 0.5rem;
+  }
+  
+  .login-btn:disabled {
+    background-color: #a5b4fc;
+    cursor: not-allowed;
+  }
+  
+  .login-btn:hover:not(:disabled) {
+    background-color: #4338ca;
+    transform: translateY(-1px); /* Matched to account button hover */
+  }
+  
+  .login-footer {
+    margin-top: 1.5rem; /* Reduced to match spacing */
+    text-align: center;
+  }
+  
+  .footer-link {
+    margin: 0.75rem 0;
+    font-size: 0.9rem;
+    color: #4a5568;
+  }
+  
+  .footer-link a {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .footer-link a:hover {
+    text-decoration: underline;
+  }
+  
+  .admin-option {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #f0f0f0;
+    font-size: 0.9rem; /* Matched to account font size */
+  }
+  
+  .admin-option p {
+    margin: 0;
+    color: #4a5568;
+  }
+  
+  .admin-option a {
+    color: #4f46e5;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  .admin-option a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive adjustments - Matched to account breakpoints */
+  @media (max-width: 768px) {
+    .login-content-wrapper {
+      flex-direction: column;
+      min-height: auto;
+    }
+    
+    .login-image {
+      height: 250px;
+      order: -1;
+    }
+    
+    .login-form {
+      padding: 1.5rem; /* Matched to mobile account padding */
+    }
+    
+    .login-container {
+      padding: 1rem;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .login-card {
+      max-width: 750px;
+    }
+  }

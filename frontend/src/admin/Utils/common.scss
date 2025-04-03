@@ -1,0 +1,25 @@
+.dashboard-admin {
+  display: flex;
+  min-height: 100vh;
+  
+  .content {
+    flex: 1;
+    margin-left: 250px; // Default sidebar width
+    padding: 2rem;
+    transition: margin-left 0.3s ease;
+    
+    @media (max-width: 768px) {
+      margin-left: 0;
+      padding: 1rem;
+    }
+  }
+  
+  // When sidebar is collapsed
+  .sidebar.collapsed ~ .content {
+    margin-left: 80px; // Collapsed sidebar width
+    
+    @media (max-width: 768px) {
+      margin-left: 0;
+    }
+  }
+}

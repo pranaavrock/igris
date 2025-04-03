@@ -1,0 +1,234 @@
+/* CertificationDashboard.css */
+.certification-dashboard {
+    font-family: 'Google Sans', Roboto, Arial, sans-serif;
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #202124;
+  }
+  
+  .dashboard-header {
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 28px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+  }
+  
+  .header-icon {
+    color: #1a73e8;
+    font-size: 28px;
+  }
+  
+  .controls {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  
+  .search-bar {
+    flex: 1;
+    max-width: 500px;
+    position: relative;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 12px 16px 12px 48px;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.2s;
+    font-family: 'Google Sans', Roboto, Arial, sans-serif;
+  }
+  
+  .search-bar input:focus {
+    outline: none;
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #5f6368;
+    font-size: 20px;
+  }
+  
+  .filter-dropdown {
+    position: relative;
+  }
+  
+  .filter-dropdown select {
+    padding: 12px 16px 12px 48px;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: white;
+    cursor: pointer;
+    appearance: none;
+    font-family: 'Google Sans', Roboto, Arial, sans-serif;
+  }
+  
+  .filter-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #5f6368;
+    font-size: 20px;
+    pointer-events: none;
+  }
+  
+  .certification-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+  }
+  
+  .certification-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+    border: 1px solid #e0e0e0;
+  }
+  
+  .certification-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px 0 rgba(60, 64, 67, 0.3), 0 6px 20px 0 rgba(60, 64, 67, 0.15);
+  }
+  
+  .card-image {
+    position: relative;
+    height: 160px;
+    overflow: hidden;
+  }
+  
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .certification-card:hover .card-image img {
+    transform: scale(1.05);
+  }
+  
+  .badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #34a853;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .card-content h3 {
+    margin: 0 0 8px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #202124;
+  }
+  
+  .meta {
+    display: flex;
+    gap: 16px;
+    font-size: 14px;
+    color: #5f6368;
+    margin-bottom: 12px;
+  }
+  
+  .completion-date {
+    font-size: 14px;
+    color: #5f6368;
+    margin-top: 8px;
+  }
+  
+  .card-actions {
+    padding: 0 20px 20px;
+  }
+  
+  .view-button {
+    width: 100%;
+    padding: 12px;
+    background: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-family: 'Google Sans', Roboto, Arial, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .view-button:hover {
+    background: #1765cc;
+  }
+  
+  .empty-state {
+    text-align: center;
+    padding: 64px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    margin-top: 24px;
+  }
+  
+  .empty-state p {
+    color: #5f6368;
+    font-size: 16px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .controls {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .search-bar {
+      max-width: 100%;
+    }
+  
+    .certification-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .certification-dashboard {
+      padding: 16px;
+    }
+  
+    .dashboard-header h1 {
+      font-size: 24px;
+    }
+  
+    .card-content h3 {
+      font-size: 18px;
+    }
+  }

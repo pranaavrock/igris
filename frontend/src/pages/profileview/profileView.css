@@ -1,0 +1,207 @@
+/* Profile View - SaaS Style */
+.profile-view-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    color: #334155;
+  }
+  
+  .profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    gap: 1rem;
+  }
+  
+  .profile-header h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0;
+  }
+  
+  .back-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    color: #64748b;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    font-size: 0.875rem;
+  }
+  
+  .back-button:hover {
+    color: #4f46e5;
+    background: #f1f5f9;
+  }
+  
+  .edit-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #4f46e5;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  .edit-button:hover {
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+  }
+  
+  .profile-card {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+  
+  .profile-avatar {
+    position: relative;
+  }
+  
+  .avatar-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #f1f5f9;
+  }
+  
+  .profile-badge {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #4f46e5;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  
+  .profile-info h2 {
+    font-size: 1.5rem;
+    margin: 0 0 0.25rem;
+    color: #1e293b;
+  }
+  
+  .username {
+    color: #64748b;
+    margin: 0 0 1rem;
+  }
+  
+  .profile-bio {
+    color: #475569;
+    line-height: 1.5;
+    max-width: 600px;
+  }
+  
+  .profile-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .detail-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+  
+  .detail-card h3 {
+    font-size: 1.125rem;
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    color: #1e293b;
+    font-weight: 600;
+  }
+  
+  .detail-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  
+  .detail-item {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .detail-icon {
+    color: #64748b;
+    margin-top: 2px;
+  }
+  
+  .detail-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .detail-label {
+    font-size: 0.875rem;
+    color: #64748b;
+  }
+  
+  .detail-value {
+    font-weight: 500;
+    color: #1e293b;
+  }
+  
+  /* Loading and Error States */
+  .profile-loading,
+  .profile-error,
+  .profile-not-found {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    font-size: 1.125rem;
+  }
+  
+  .profile-error {
+    color: #dc2626;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .profile-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    
+    .profile-card {
+      flex-direction: column;
+      text-align: center;
+      padding: 1.5rem;
+    }
+    
+    .profile-info {
+      text-align: center;
+    }
+    
+    .profile-details {
+      grid-template-columns: 1fr;
+    }
+  }

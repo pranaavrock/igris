@@ -1,0 +1,188 @@
+/* Register.css - Extended from Login with additional features */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: #f8f9fa;
+}
+  
+.register-card {
+    width: 100%;
+    max-width: 900px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+    border: 1px solid #eaeaea;
+}
+  
+.register-content-wrapper {
+    display: flex;
+    min-height: 550px; /* Slightly taller to accommodate extra field */
+}
+  
+.register-form {
+    flex: 1;
+    padding: 2.5rem;
+    min-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+  
+.register-image {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    background-color: #f7fafc;
+}
+  
+.register-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+  
+.register-header {
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+  
+.register-title {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2d3748;
+}
+  
+.register-subtitle {
+    margin: 0.25rem 0 0;
+    font-size: 0.9rem;
+    color: #718096;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+    position: relative;
+}
+  
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #4a5568;
+    font-weight: 500;
+}
+
+.required {
+    color: #e53e3e;
+}
+  
+.form-input {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    font-size: 0.95rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    background-color: #f8fafc;
+}
+  
+.form-input:focus {
+    outline: none;
+    border-color: #4f46e5;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.1);
+}
+
+.input-error {
+    border-color: #e53e3e;
+    background-color: #fff5f5;
+}
+
+.input-error:focus {
+    box-shadow: 0 0 0 2px rgba(229, 62, 62, 0.1);
+}
+
+.error-message {
+    color: #e53e3e;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+}
+  
+.register-btn {
+    width: 100%;
+    padding: 0.85rem;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 0.5rem;
+}
+  
+.register-btn:disabled {
+    background-color: #a5b4fc;
+    cursor: not-allowed;
+}
+  
+.register-btn:hover:not(:disabled) {
+    background-color: #4338ca;
+    transform: translateY(-1px);
+}
+  
+.register-footer {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+  
+.footer-link {
+    margin: 0.75rem 0;
+    font-size: 0.9rem;
+    color: #4a5568;
+}
+  
+.footer-link a {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 500;
+}
+  
+.footer-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .register-content-wrapper {
+      flex-direction: column;
+      min-height: auto;
+    }
+    
+    .register-image {
+      height: 200px;
+      order: -1;
+    }
+    
+    .register-form {
+      padding: 1.5rem;
+    }
+    
+    .register-container {
+      padding: 1rem;
+    }
+}
+  
+@media (min-width: 769px) and (max-width: 1024px) {
+    .register-card {
+      max-width: 750px;
+    }
+}

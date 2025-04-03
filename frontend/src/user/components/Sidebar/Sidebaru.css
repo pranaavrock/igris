@@ -1,0 +1,147 @@
+/* Sidebar Container */
+.sidebaru {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    border-right: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease;
+    z-index: 100;
+  }
+  
+  /* Collapsed State */
+  .sidebaru-collapsed {
+    width: 70px;
+  }
+  
+  /* Header Section */
+  .sidebaru-header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e0e0e0;
+    height: 70px;
+  }
+  
+  .sidebaru-logo {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .sidebaru-toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #555;
+    padding: 5px;
+  }
+  
+  /* Navigation Section */
+  .sidebaru-nav {
+    flex: 1;
+    padding: 20px 0;
+    overflow-y: auto;
+  }
+  
+  .sidebaru-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebaru-nav-item {
+    margin-bottom: 5px;
+  }
+  
+  .sidebaru-nav-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: #555;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  
+  .sidebaru-nav-link:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .sidebaru-nav-link-active {
+    background-color: #f0f0f0;
+    color: #000;
+    font-weight: 500;
+  }
+  
+  .sidebaru-nav-icon {
+    font-size: 1.1rem;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidebaru-collapsed .sidebaru-nav-icon {
+    margin-right: 0;
+  }
+  
+  .sidebaru-nav-text {
+    font-size: 0.9rem;
+  }
+  
+  /* Footer Section */
+  .sidebaru-footer {
+    padding: 15px;
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .sidebaru-logout-btn {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    color: #555;
+    cursor: pointer;
+    padding: 8px 15px;
+    width: 100%;
+    border-radius: 4px;
+  }
+  
+  .sidebaru-logout-btn:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .sidebaru-logout-icon {
+    margin-right: 15px;
+    font-size: 1.1rem;
+  }
+  
+  .sidebaru-collapsed .sidebaru-logout-icon {
+    margin-right: 0;
+  }
+  
+  /* Hide scrollbar */
+  .sidebaru-nav::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .sidebaru-nav {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .sidebaru {
+      transform: translateX(-100%);
+    }
+    
+    .sidebaru-collapsed {
+      transform: translateX(0);
+    }
+  }

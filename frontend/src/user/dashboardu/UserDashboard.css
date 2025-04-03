@@ -1,0 +1,460 @@
+/* UserDashboard.css */
+.user-dashboard {
+  padding: 3rem 2rem 2rem; /* More top padding */
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.dashboard-header {
+  margin-bottom: 2.5rem; /* Increased spacing */
+}
+
+.dashboard-header h1 {
+  font-size: 2rem; /* Slightly larger */
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.dashboard-header p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.8rem; /* Increased gap */
+  margin-bottom: 3rem; /* More space below stats */
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: 12px; /* Slightly rounder */
+  padding: 1.8rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Softer shadow */
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #f0f0f0; /* Subtle border */
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.stat-icon-container {
+  background: #e3f2fd;
+  width: 56px; /* Slightly larger */
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.2rem;
+  color: #1976d2;
+  font-size: 1.4rem;
+}
+
+.stat-content h3 {
+  font-size: 2rem; /* Larger numbers */
+  margin: 0;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.stat-title {
+  margin: 0.3rem 0;
+  color: #7f8c8d;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.stat-trend {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #27ae60;
+  display: flex;
+  align-items: center;
+}
+
+/* Dashboard Content Grid */
+.dashboard-content-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem; /* Increased gap */
+}
+
+@media (min-width: 1200px) {
+  .dashboard-content-grid {
+    grid-template-columns: 2.5fr 1.5fr; /* Adjusted ratio */
+    gap: 3rem;
+  }
+}
+
+/* Section Styles */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.8rem; /* More space */
+}
+
+.section-header h2 {
+  font-size: 1.5rem; /* Larger */
+  color: #2c3e50;
+  margin: 0;
+  font-weight: 600;
+}
+
+.view-all-btn {
+  background: none;
+  border: none;
+  color: #3498db;
+  cursor: pointer;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+  font-weight: 500;
+}
+
+.view-all-btn:hover {
+  background: #f5f9fd;
+}
+
+/* Courses Section - Improved Alignment */
+.courses-section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+}
+
+.courses-list {
+  display: grid;
+  gap: 1.8rem; /* More space between cards */
+}
+
+.course-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.8rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.course-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.course-header {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.course-header h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.instructor {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+.progress-container {
+  margin-bottom: 1.5rem;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+.progress-bar-bg {
+  height: 8px;
+  background: #ecf0f1;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3498db, #4a90e2);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.course-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.last-accessed {
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+.resume-btn {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(52, 152, 219, 0.2);
+}
+
+.resume-btn:hover {
+  background: #2980b9;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+}
+
+/* Activities Section */
+.activities-section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+}
+
+.activities-list {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.activity-item {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.2rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+  border: 1px solid #f5f5f5;
+}
+
+.activity-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.activity-icon {
+  background: #e3f2fd;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.2rem;
+  color: #1976d2;
+  font-size: 1.1rem;
+}
+
+.activity-content {
+  flex: 1;
+}
+
+.activity-action {
+  margin: 0 0 0.3rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.activity-course {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+.activity-time {
+  font-size: 0.85rem;
+  color: #bdc3c7;
+  font-weight: 500;
+}
+
+/* Performance Section */
+.performance-section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+  margin-bottom: 2.5rem;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.metric-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+  border: 1px solid #f5f5f5;
+}
+
+.metric-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.metric-card h4 {
+  margin: 0 0 0.8rem 0;
+  font-size: 0.95rem;
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+.metric-value-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.metric-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-right: 0.5rem;
+  color: #2c3e50;
+}
+
+.metric-change {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.metric-change.positive {
+  color: #27ae60;
+}
+
+.metric-change.negative {
+  color: #e74c3c;
+}
+
+/* Quick Actions */
+.quick-actions-section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+}
+
+.actions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.action-card {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.action-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-color: #3498db;
+}
+
+.action-card svg {
+  margin-bottom: 0.8rem;
+  color: #3498db;
+  font-size: 1.8rem;
+}
+
+.action-card span {
+  font-size: 0.95rem;
+  text-align: center;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .user-dashboard {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .metrics-grid, .actions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-dashboard {
+    padding: 2rem 1rem;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .stat-card {
+    padding: 1.5rem;
+  }
+  
+  .courses-section, 
+  .activities-section,
+  .performance-section,
+  .quick-actions-section {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .course-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .resume-btn {
+    width: 100%;
+  }
+}
