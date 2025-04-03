@@ -33,7 +33,6 @@ app.use(cors({
 
 app.use("/api", quizRoutes);
 app.use("/api/users", userRoutes);
-const port = 5000;
 
 app.get("/", (req, res) => {
   res.send("Server is working");
@@ -57,8 +56,8 @@ if(process.env.NODE_ENV === "production")
     app.get("*", (req,res) => res.sendFile(path.resolve(__dirname,"frontend","index.html")) );
 }
 
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+app.listen(process.env.PORT, () => {
+  console.log(`Server is running on http://localhost:${process.env.PORT}`);
   connectDb();
 });
 
